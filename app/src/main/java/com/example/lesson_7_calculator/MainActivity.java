@@ -3,6 +3,7 @@ package com.example.lesson_7_calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,11 +28,23 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Integer> delit = new ArrayList<>();
 
+    private MaterialButton btn_setRes = findViewById(R.id.btn_setRes);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text = findViewById(R.id.nolik);
+
+        btn_setRes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                String text1 = text.getText().toString();
+                intent.putExtra("key1", text1);
+                startActivity(intent);
+            }
+        });
     }
 
     public void OnNumberClick(View view) {
@@ -131,6 +144,8 @@ public class MainActivity extends AppCompatActivity {
                 delit.clear();
             }
 
+            btn_setRes.setVisibility(View.VISIBLE);
+
             isPlusClicked = false;
             isMinusClicked = false;
             isDelitClicked = false;
@@ -139,6 +154,5 @@ public class MainActivity extends AppCompatActivity {
         isOperationClicked = true;
     }
 
-    public void OnDotClick(View view) {
-    }
+
 }

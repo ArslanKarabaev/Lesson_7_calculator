@@ -28,6 +28,22 @@
 
     </FrameLayout>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_setRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Set Result"
+        android:textSize="30sp"
+        android:paddingVertical="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        app:backgroundTint="@color/orange"
+        android:visibility="gone"
+        />
+
 
     <LinearLayout
         android:id="@+id/container"
