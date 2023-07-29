@@ -7,4 +7,11 @@
     </style>
 
     <style name="Theme.Lesson_7_calculator" parent="Base.Theme.Lesson_7_calculator" />
+    <style name="Theme.Lesson_7_calculator.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Lesson_7_calculator.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Lesson_7_calculator.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -28,13 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Integer> delit = new ArrayList<>();
 
-    private MaterialButton btn_setRes = findViewById(R.id.btn_setRes);
+    private MaterialButton btn_setRes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text = findViewById(R.id.nolik);
+        btn_setRes = findViewById(R.id.btn_setRes);
 
         btn_setRes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
            text.setText("0");
            sum.clear();
            raz.clear();
+           btn_setRes.setVisibility(View.GONE);
        }else if(view.getId() == R.id.btn_one){
            check(1);
        }else if(view.getId() == R.id.btn_two){

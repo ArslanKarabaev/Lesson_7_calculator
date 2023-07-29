@@ -90,16 +90,19 @@
             app:layout_constraintTop_toBottomOf="@id/btns"
             android:background="@color/white2"
             android:text="Current Policies"
+            android:textColor="@color/dark_blue"
             android:textSize="40sp"
             android:gravity="center"
             android:textStyle="bold"
             android:layout_marginTop="60dp"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_destroy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/text"
             android:text="Export as CSV"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_marginTop="20dp"
             android:paddingVertical="15dp"
